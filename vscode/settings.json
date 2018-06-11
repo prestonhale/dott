@@ -1,0 +1,60 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ]
+,
+"vim.enableNeovim": false,
+
+"python.pythonPath": "/Users/prestonhale/Documents/teampay/app/venv/bin/python",
+"python.linting.lintOnSave": true,
+"python.linting.pylintEnabled": false,
+"python.linting.flake8Enabled": true,
+
+"files.autoSave": "afterDelay",
+"editor.formatOnSave": true,
+"explorer.autoReveal": false,
+
+"files.exclude": {
+    "**/*.pyc": true,
+    "**/*.svn": true,
+    "**/*.meta": true,
+    "**/*.hg": true,
+    "**/*.DS_Store": true,
+    "**/*.xml": true,
+    "tags": true,
+    "venv/**": true
+},
+"editor.minimap.enabled": true,
+"editor.codeLens": false,
+"editor.tabSize": 4,
+"editor.insertSpaces": true,
+
+"[python]": {
+        
+    },
+"vim.disableAnnoyingNeovimMessage": true,
+
+"window.zoomLevel": 0,
+"window.title": "${activeEditorMedium}${dirty}${separator}${rootName}",
+
+"workbench.startupEditor": "newUntitledFile",
+"dart.debugSdkLibraries": true,
+"dart.debugExternalLibraries": true,
+"html.autoClosingTags": false,
+"gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+},
+"explorer.confirmDragAndDrop": false,
+"workbench.editor.showTabs": true,
+}
