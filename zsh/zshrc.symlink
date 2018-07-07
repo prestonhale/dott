@@ -152,5 +152,8 @@ alias ngrok="/Applications/ngrok http -hostname=preston.ngrok.io 80"
 alias haub="cd ~/Documents/hauberk && sudo npm run"
 alias scrl="cd ~/Documents/scrolltown/Scrolltown"
 alias new-data-model="export DATABASE_URL=postgres://prestonhale:@localhost:5432/new-data-model; export DOCKER_DATABASE_URL=postgres://prestonhale:@192.168.65.2:5432/new-data-model"
+alias b-edits='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 export PATH=$PATH:~/.npm-global/bin/
+export PATH=$PATH:/usr/local/Cellar/node/9.3.0_1/bin/
+export PATH=$PATH:~/Documents/git-extensions/
 
