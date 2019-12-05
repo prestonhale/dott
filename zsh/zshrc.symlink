@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # ================= Zsh Config ===================================
-export ZSH=/Users/prestonhale/.oh-my-zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+# export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -40,9 +41,6 @@ alias prommon="kubectl --namespace=monitoring get pods -l app=prometheus -o name
 	sed 's/^.*\///' | \
 	xargs -I{} kubectl --namespace=monitoring port-forward {} 9090:9090"
 alias src='source ~/.zshrc'
-
-# ===================== Defaults ===================================
-xmodmap -e "pointer = 3 2 1"
 alias right_mouse='xmodmap -e "pointer = 1 2 3"'
 alias left_mouse='xmodmap -e "pointer = 3 2 1"'
 
@@ -66,8 +64,7 @@ export PATH=$PATH:/usr/java/jre1.8.0_211/bin
 # Git Extensions
 export PATH=$PATH:~/Documents/git-extensions/
 
-# ==================== Startup Programs ===========================
-~/GoLand/bin/goland.sh &
+# ======================= Startup Programs =======================
 kubectl proxy &
 
 # ===================== Secret Stuff =============================

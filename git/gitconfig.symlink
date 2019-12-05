@@ -31,7 +31,7 @@
 [push]
 	default = current
 [credential]
-    helper = osxkeychain
+	helper = store
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]

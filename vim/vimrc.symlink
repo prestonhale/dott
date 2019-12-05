@@ -27,59 +27,15 @@ syntax on
 " =============================================================
 " =			               Plugins 			                  =
 " =============================================================
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" ========================  Crtl-P ============================
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
-
-" Use the Silver Searcher for searches instead of default vim search
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " User SS instead of grep too
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Don't cache
-  let g:ctrlp_use_caching = 0
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" ========================  NERDTree ============================
-Plugin 'scrooloose/nerdtree'
-" Start NERDTree with vim
-autocmd vimenter * NERDTree
-
-" Start NERDTree when opening bare vim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Close NERDTree if its the only remaining buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-" =====================  Vundle Config  =========================
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+call plug#end()
 
 " =============================================================
 " =			                  Keymaps 			              =
