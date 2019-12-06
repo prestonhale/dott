@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # ================= Zsh Config ===================================
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-# export ZSH=/home/$USER/.oh-my-zsh
+export ZSH_CUSTOM=/home/$USE/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="custom-cloud"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -63,6 +63,9 @@ export PATH=$PATH:~/.kube/plugins
 export PATH=$PATH:/usr/java/jre1.8.0_211/bin
 # Git Extensions
 export PATH=$PATH:~/Documents/git-extensions/
+# Homebrew
+PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+
 
 # ======================= Startup Programs =======================
 kubectl proxy &
