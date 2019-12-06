@@ -130,12 +130,17 @@ install_software () {
   then
     apt-get update > /dev/null
 
+    info "Installing zsh"
+    apt-get install -y zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    success "instlled zsh"
+
     info "Installing guake"
-    apt-get install guake > /dev/null
+    apt-get install -y guake
     success "guake installed"
 
     info "Installing Homebrew"
-    apt-get install linuxbrew-wrapper > /dev/null
+    apt-get install -y linuxbrew-wrapper
     success "Homebrew installed"
 
   elif [ "$(uname -s)" == "Darwin" ]
@@ -155,6 +160,7 @@ install_vscode () {
     info "Installing VSCode"
 
     sudo snap install --classic code > /dev/null
+    mkdir -p $HOME/.config/Code/User
     if [ "$(uname -s)" == "Linux" ]; then
       vscode_settings_dst=$HOME/.config/Code/User
       for src in $(find -H "$DOTFILES_ROOT/vscode" -type f)
