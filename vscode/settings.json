@@ -9,11 +9,6 @@
 ,
 "vim.enableNeovim": false,
 
-"python.pythonPath": "/Users/prestonhale/Documents/teampay/app/venv/bin/python",
-"python.linting.lintOnSave": true,
-"python.linting.pylintEnabled": false,
-"python.linting.flake8Enabled": true,
-
 "files.autoSave": "afterDelay",
 "editor.formatOnSave": true,
 "explorer.autoReveal": false,

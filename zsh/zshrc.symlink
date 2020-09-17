@@ -49,10 +49,10 @@ export PATH=$HOME/.local/bin/:$PATH
 
 # Fixes error with linux homebrew
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/
-# Go paxages
-export PATH=$PATH:~/go/bin
+# Go
+export PATH=/usr/local/go/bin:$PATH
 # Goland
-export PATH=$PATH:$HOME/GoLand/bin
+export PATH=$PATH:Documents/Apps/GoLand-2019.3.4/bin
 # Perforce
 export PATH=$PATH:$HOME/p4v/bin
 # Custom scripts
@@ -65,10 +65,14 @@ export PATH=$PATH:/usr/java/jre1.8.0_211/bin
 export PATH=$PATH:~/Documents/git-extensions/
 # Homebrew
 PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+# Installed apps
+PATH="$PATH:~/Documents/Apps/GoLand-2019.3.4/bin"
+PATH="$PATH:~/Documents/Apps/GitAhead"
+PATH="$PATH:~/Documents/Apps/p4v-2019.2.1904275/bin"
 
 
 # ======================= Startup Programs =======================
-kubectl proxy &
+kubectl proxy --port=8002 &
 
 # ===================== Secret Stuff =============================
 source ~/.secrets-rc

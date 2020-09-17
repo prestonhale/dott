@@ -26,8 +26,8 @@
 	assume-changed = update-index --no-assume-unchanged
 	ledits = "for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:\"%Cgreen%ci %Cblue%cr%Creset\" $k -- | head -n 1`\\\\t$k; done | sort -r"
 [user]
-	name = Preston
-	email = slethik@gmail.com
+	name = "Preston Hale"
+	email = phale@firststrikegames.com
 [push]
 	default = current
 [credential]
@@ -36,3 +36,7 @@
     tool = default-difftool
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
+[pull]
+	rebase = true
